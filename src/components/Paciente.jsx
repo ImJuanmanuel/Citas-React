@@ -20,6 +20,7 @@ export default function Paciente({ paciente, setPaciente, eliminarPaciente }) {
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed){
+                eliminarPaciente(id)
                 toast.success('Paciente Eliminado Correctamente', {
                     position: "top-right",
                     autoClose: 5000,
@@ -33,9 +34,7 @@ export default function Paciente({ paciente, setPaciente, eliminarPaciente }) {
 
                 
             }
-            if(result.isConfirmed){
-                eliminarPaciente(id)
-            }
+            
             
         })
         

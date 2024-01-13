@@ -1,11 +1,8 @@
 import Paciente from "./Paciente"
 
 
+
 export default function ListadoPacientes({ pacientes, setPaciente,eliminarPaciente}) {
-
-
-
-
 
   return (
     

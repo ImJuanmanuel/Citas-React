@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react'
 import Error from './Error'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Formulario({pacientes,setPacientes,paciente,setPaciente}) {
@@ -59,18 +61,23 @@ const handleSubmit = (e) =>{
         objectoPaciente.id = generarId()
         setPacientes([...pacientes,objectoPaciente])
       }
-      /* setPacientes([...pacientes,objectoPaciente]) */
-
-      //console.log(objectoPaciente)
       
-
-
-      //
       setNombre('')
       setPropietario('')
       setEmail('')
       setFecha('')
       setSintomas('')
+
+      toast.success('Paciente Agregado Correctamente', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light"
+    })
 
       
 }
@@ -178,7 +185,7 @@ const handleSubmit = (e) =>{
 
 
       </form>
-      
+      <ToastContainer/>
     </div>
   )
 }

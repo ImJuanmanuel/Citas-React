@@ -21,7 +21,7 @@ export default function Paciente({ paciente, setPaciente, eliminarPaciente }) {
         }).then((result) => {
             if (result.isConfirmed){
                 eliminarPaciente(id)
-                toast.success('Paciente Eliminado Correctamente', {
+                toast.success('Paciente Eliminado con exito', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
